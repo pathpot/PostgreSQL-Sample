@@ -9,7 +9,7 @@ var port = process.env.PORT || 5000;
 //Send text directly
 app.get('/', function(req, res){
 		//res.send('PostgreSQL-Test!');		
-		res.send(get_data());
+		res.send('My data : ' + get_data());
 	}
 );
 
