@@ -1,0 +1,44 @@
+adding "pg" dependency in package.json
+> "pg": "2.x"
+
+in code
+> var pg = require('pg');
+
+create heroku
+> heroku create
+
+push to heroku
+> git push heroku
+
+add Heroku Postgres Starter Tier dev database
+> heroku addons:add heroku-postgresql:dev
+
+promote database to DATABASE_URL
+> heroku pg:promote HEROKU_POSTGRESQL_RED_URL
+
+------------------------------------------------------------------------------------------
+Set up Postgres.app on Mac
+------------------------------------------------------------------------------------------
+1. download and install from http://postgresapp.com/
+
+2. add PATH
+> PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+
+------------------------------------------------------------------------------------------
+pull remote data from a Heroku Postgres database to a database on your local machine
+------------------------------------------------------------------------------------------
+
+1. connect to Heroku PostgreSQL database
+> heroku pg:psql
+
+2. pull database from app_name to local_db_name
+> heroku pg:pull HEROKU_POSTGRESQL_MAGENTA local_db_name --app app_name
+
+or
+
+> heroku pg:pull app_name::MAGENTA local_db_name
+
+
+can reset database
+> heroku pg:reset DATABASE
+
