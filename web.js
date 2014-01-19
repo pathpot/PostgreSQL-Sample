@@ -19,13 +19,14 @@ app.listen(port, function() {
 );
 
 function get_data(){
+	ret = '';
 	pg.connect(process.env.DATABASE_URL, function(err, client) {
   		var query = client.query('SELECT * FROM users');
   		query.on('row', function(row) {
-    		console.log(JSON.stringify(row));
+    		ret = console.log(JSON.stringify(row));
   		});
 	});
 	
-	return JSON.stringify(row);
+	return ret;
 }
 
