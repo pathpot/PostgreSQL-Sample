@@ -1,0 +1,14 @@
+{
+  "name": "PostgreSQL-Sample",
+  "version": "0.0.0",
+  "dependencies":{
+	"express": "3.3.4",
+	"sequelize": "1.7.x",
+	"socket.io": "0.8.7",
+	"jade" : "0.34.1"
+  },
+  "engines":{
+	"node": "0.10.x",
+	"npm" : "1.2.x"
+  }
+}
