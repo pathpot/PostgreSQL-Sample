@@ -8,8 +8,8 @@ var port = process.env.PORT || 5000;
 
 //Send text directly
 app.get('/', function(req, res){
-		//res.send('PostgreSQL-Test!');		
-		res.send('My data : ' + get_data());
+		//res.send('PostgreSQL-Test!');
+		res.send('My data : ' + process.env.DATABASE_URL);
 	}
 );
 
