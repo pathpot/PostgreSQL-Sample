@@ -18,11 +18,11 @@ app.get('/checkdb', function(req, res){
 	client.connect();
 
 	//query
-	var  query = client.query("SELECT * FROM users', [req.params.client_id]);
+	var  query = client.query("SELECT * FROM users", [req.params.client_id]);
    	query.on('row', function(row) {
    		res.send(row);
-	}
-);
+	});
+});
 
 app.listen(port, function() {
  		console.log(" Listening on " + port);
