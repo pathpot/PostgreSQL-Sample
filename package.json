@@ -5,7 +5,8 @@
 	"express": "3.3.4",
 	"sequelize": "1.7.x",
 	"socket.io": "0.8.7",
-	"jade" : "0.34.1"
+	"jade" : "0.34.1",
+	"pg": "2.x"
   },
   "engines":{
 	"node": "0.10.x",
