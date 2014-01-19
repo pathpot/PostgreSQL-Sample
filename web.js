@@ -17,7 +17,7 @@ app.get('/checkdb', function(req, res){
 	var client = new pg.Client(connection_url);
 	client.connect();
 
-	% query
+	//query
 	var  query = client.query("SELECT * FROM users', [req.params.client_id]);
    	query.on('row', function(row) {
    		res.send(row);
