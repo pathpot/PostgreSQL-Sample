@@ -8,7 +8,7 @@ var port = process.env.PORT || 5000;
 
 //Send text directly
 app.get('/', function(req, res){
-		res.send('Hello World!');		
+		res.send('PostgreSQL-Test!');		
 	}
 );
 
@@ -17,10 +17,9 @@ app.listen(port, function() {
  	}
 );
 
-/*%g.connect(process.env.DATABASE_URL, 
-	function(err, client) {
+pg.connect(process.env.DATABASE_URL, function(err, client) {
   		var query = client.query('SELECT * FROM users');
   		query.on('row', function(row) {
     		console.log(JSON.stringify(row));
   		});
-});*/
+});

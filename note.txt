@@ -13,6 +13,9 @@ push to heroku
 add Heroku Postgres Starter Tier dev database
 > heroku addons:add heroku-postgresql:dev
 
+view available databases
+> heroku config | grep HEROKU_POSTGRESQL
+
 promote database to DATABASE_URL
 > heroku pg:promote HEROKU_POSTGRESQL_RED_URL
 
