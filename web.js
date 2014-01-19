@@ -23,7 +23,8 @@ function get_data(){
 	pg.connect(process.env.DATABASE_URL, function(err, client) {
   		var query = client.query('SELECT * FROM users');
   		query.on('row', function(row) {
-    		ret = console.log(JSON.stringify(row));
+    		ret = JSON.stringify(row);
+    		console.log(JSON.stringify(row));
   		});
 	});
 	
